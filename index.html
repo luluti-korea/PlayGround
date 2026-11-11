@@ -1,0 +1,150 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f6f0df"><title>Hearth &amp; Harvest</title><style>
+:root{--ink:#28362c;--muted:#758071;--card:#fffdf6;--green:#577650;--line:#e7dfca}*{box-sizing:border-box}body{margin:0;background:#f6f0df;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}button{font:inherit;color:inherit}button:focus-visible{outline:3px solid #dca74e;outline-offset:2px}.app{max-width:1180px;margin:auto;padding:20px 24px 44px}.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;background:#e6ecd9;font-size:25px}.brand h1{font:22px Georgia,serif;margin:0}.brand p{margin:3px 0 0;color:var(--muted);font-size:11px;letter-spacing:1.5px;text-transform:uppercase}.season-chip{background:#e8eddc;color:#4f6949;border-radius:99px;padding:9px 14px;font-size:12px;font-weight:800}.hero{background:linear-gradient(112deg,#344d3a,#617b53);color:#fffdf3;border-radius:22px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.round-title{font:28px Georgia,serif;margin:0 0 6px}.round-copy{margin:0;color:#e1e9d8;font-size:13px}.round-stat{display:flex;gap:8px}.stat-pill{background:#ffffff18;border:1px solid #ffffff25;border-radius:14px;padding:9px 13px;min-width:76px;text-align:center}.stat-pill b{display:block;font:20px Georgia,serif}.stat-pill span{font-size:10px;color:#e1e9d8;text-transform:uppercase}.resource-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:12px 0 16px}.resource,.panel{background:var(--card);border:1px solid var(--line);border-radius:15px}.resource{padding:9px 10px;display:flex;align-items:center;gap:8px}.res-icon{font-size:19px}.res-label{font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);display:block}.res-value{font-size:16px;font-weight:800}.layout{display:grid;grid-template-columns:1.05fr 1fr;gap:16px;align-items:start}.panel{padding:17px;box-shadow:0 8px 26px #34423010}.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}.panel-head h2{font:21px Georgia,serif;margin:0}.eyebrow{font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);font-weight:800}.farm-meta{color:var(--muted);font-size:11px}.farm-board{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;max-width:450px;margin:auto}.plot{aspect-ratio:1.27;border:1.5px dashed #c9cbb1;border-radius:12px;background:#f2f1e4;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;color:#77806e;cursor:pointer;padding:3px}.plot.empty:hover{background:#eaf0df;border-color:#78906c}.tile-icon{font-size:25px;line-height:1.1}.tile-name{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-top:3px}.tile-sub{font-size:9px;color:#828a7b}.plot.room{background:linear-gradient(145deg,#b77d52,#8b5a3b);border:1px solid #996a4b;color:#fff4db}.plot.field,.plot.sown,.plot.vegsown{background:#b8955a;border:1px solid #9a784a;color:#fff1cf}.plot.pasture{background:#c9d6ad;border:1px solid #aebf8e;color:#526845}.farm-legend{display:flex;justify-content:center;gap:15px;margin-top:11px;font-size:10px;color:var(--muted)}.legend-dot{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:4px}.animals-row{display:flex;gap:8px;margin-top:14px}.animal{flex:1;background:#f5f1e4;border-radius:11px;padding:9px;display:flex;justify-content:space-between;align-items:center;font-size:11px}.animal strong{font-size:14px}.worker-status{margin-top:12px;background:#eff2e7;border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;font-size:11px}.worker-icons{letter-spacing:2px;font-size:15px}.right-col{display:flex;flex-direction:column;gap:12px}.actions-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.action{border:1px solid var(--line);border-radius:12px;background:#fffef9;padding:10px;text-align:left;cursor:pointer;min-height:70px;position:relative}.action:hover:not(:disabled){border-color:#9caf8a;transform:translateY(-1px)}.action:disabled{opacity:.42;cursor:not-allowed}.action-top{display:flex;align-items:center;gap:8px}.action-icon{font-size:19px}.action-name{font-weight:800;font-size:11px}.action-desc{font-size:9px;color:var(--muted);line-height:1.3;margin:4px 0 0 27px}.action.used{background:#f1eee4}.action.used:after{content:'TAKEN';position:absolute;right:7px;bottom:6px;font-size:8px;letter-spacing:1px;color:#89907d;font-weight:900}.action-panel-foot{display:flex;justify-content:space-between;align-items:center;margin-top:11px;gap:8px}.hint{font-size:9px;color:var(--muted);line-height:1.4}.primary,.secondary{border:0;border-radius:10px;padding:10px 13px;font-weight:800;cursor:pointer}.primary{background:var(--green);color:white}.primary:disabled{opacity:.42;cursor:not-allowed}.secondary{background:#efe8d4;color:#66573c}.upgrades{display:grid;gap:7px}.upgrade{background:#fbf8ee;border:1px solid var(--line);border-radius:11px;padding:9px 11px;display:flex;align-items:center;justify-content:space-between;gap:8px}.upgrade-text strong{font-size:11px}.upgrade-text span{display:block;font-size:9px;color:var(--muted);margin-top:2px}.upgrade button{padding:7px 10px;font-size:9px}.log{max-height:95px;overflow:auto;display:flex;flex-direction:column;gap:6px}.log-item{font-size:10px;color:#65715f;display:flex;gap:7px}.log-item b{color:#b48845;white-space:nowrap}.overlay,.end-screen{position:fixed;inset:0;background:#1f2c23aa;display:none;align-items:center;justify-content:center;padding:16px;z-index:5}.overlay.show,.end-screen.show{display:flex}.modal,.score-card{width:min(440px,100%);background:var(--card);border-radius:20px;padding:22px;box-shadow:0 24px 70px #1119}.modal h2{font:25px Georgia,serif;margin:0 0 7px}.modal p{font-size:12px;color:var(--muted);line-height:1.5;margin:0 0 15px}.choices{display:grid;gap:8px}.choice{width:100%;border:1px solid var(--line);background:#fffef9;border-radius:12px;padding:11px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center}.choice:hover{border-color:#92a686}.choice:disabled{opacity:.4;cursor:not-allowed}.choice strong{font-size:12px}.choice small{color:var(--muted);display:block;margin-top:3px;font-size:10px}.close-row{text-align:right;margin-top:12px}.end-screen{z-index:8;background:#25342bbf}.score-card{width:min(520px,100%);max-height:90vh;overflow:auto}.score-card h2{font:30px Georgia,serif;margin:4px 0}.score-total{font:48px Georgia,serif;color:#56714c;margin:8px 0}.score-line{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:12px}.score-card .primary{margin-top:16px;width:100%}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);background:#2e4234;color:white;border-radius:99px;padding:11px 16px;font-size:11px;opacity:0;transition:.2s;pointer-events:none;z-index:9;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}.small-note{font-size:10px;color:var(--muted);text-align:center;margin:14px 0 0}@media(max-width:780px){.app{padding:13px}.hero{padding:17px}.round-title{font-size:24px}.resource-strip{grid-template-columns:repeat(4,1fr);gap:7px;margin:10px 0 12px}.resource{padding:8px}.layout{grid-template-columns:1fr;gap:11px}.panel{padding:14px}.right-col{gap:11px}.farm-board{max-width:480px}}@media(max-width:420px){.app{padding:9px}.brand h1{font-size:19px}.brand-mark{width:38px;height:38px}.season-chip{font-size:9px;padding:8px 10px}.hero{padding:14px 12px}.round-title{font-size:20px}.round-copy{font-size:10px;max-width:170px}.stat-pill{min-width:54px;padding:7px}.stat-pill b{font-size:16px}.stat-pill span{font-size:8px}.res-icon{font-size:16px}.res-label{font-size:8px}.res-value{font-size:14px}.actions-grid{gap:6px}.action{padding:8px;min-height:68px}.action-name{font-size:10px}.action-desc{font-size:8px;margin-left:25px}.tile-icon{font-size:21px}.tile-name{font-size:8px}.panel-head h2{font-size:19px}}
+</style></head><body><div class="app"><header class="topbar"><div class="brand"><div class="brand-mark">🌱</div><div><h1>Hearth &amp; Harvest</h1><p>A little life on the land</p></div></div><div class="season-chip" id="seasonChip"></div></header>
+<section class="hero"><div><h2 class="round-title" id="roundTitle"></h2><p class="round-copy" id="roundCopy"></p></div><div class="round-stat"><div class="stat-pill"><b id="workerCount"></b><span>Workers</span></div><div class="stat-pill"><b id="roundCount"></b><span>Season</span></div></div></section><div class="resource-strip" id="resources"></div><main class="layout"><section class="panel"><div class="panel-head"><div><div class="eyebrow">Your homestead</div><h2>Farmstead</h2></div><div class="farm-meta" id="farmMeta"></div></div><div class="farm-board" id="farmBoard"></div><div class="farm-legend"><span><i class="legend-dot" style="background:#bd9955"></i>Fields</span><span><i class="legend-dot" style="background:#c9d6ad"></i>Pasture</span><span><i class="legend-dot" style="background:#a7744c"></i>Home</span></div><div class="animals-row" id="animals"></div><div class="worker-status"><span id="workerText"></span><span class="worker-icons" id="workerIcons"></span></div></section><div class="right-col"><section class="panel"><div class="panel-head"><div><div class="eyebrow">Choose wisely</div><h2>Today's work</h2></div><span class="farm-meta" id="actionsLeft"></span></div><div class="actions-grid" id="actions"></div><div class="action-panel-foot"><div class="hint">Every action space can be used once per season.<br>Harvest comes at the end of every other season.</div><button class="primary" id="endRound">End season →</button></div></section><section class="panel"><div class="panel-head"><div><div class="eyebrow">A better homestead</div><h2>Improvements</h2></div><span class="farm-meta">once each</span></div><div class="upgrades" id="upgrades"></div></section><section class="panel"><div class="panel-head"><div><div class="eyebrow">From the fields</div><h2>Season notes</h2></div></div><div class="log" id="log"></div></section></div></main><p class="small-note">Build a thriving farm, feed your family, and make every plot count.</p></div><div class="overlay" id="overlay"><div class="modal"><h2 id="modalTitle"></h2><p id="modalCopy"></p><div class="choices" id="choices"></div><div class="close-row"><button class="secondary" id="cancelModal">Not now</button></div></div></div><div class="end-screen" id="endScreen"><div class="score-card" id="scoreCard"></div></div><div class="toast" id="toast"></div><script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const names = ['Wood','Clay','Reed','Food','Grain','Vegetables','Sheep','Cattle','Pigs'];
+  const icons = ['🪵','🧱','🌾','🍲','🌽','🥕','🐑','🐄','🐖'];
+  const seasons = ['Spring','Early Summer','High Summer','Autumn','Late Autumn','Winter'];
+  const actions = [
+    ['wood','🪵','Woodlot','Gather 3 wood for your growing farm.'],
+    ['clay','🧱','Clay pit','Dig up 2 clay for improvements.'],
+    ['reed','🌾','Reed bank','Collect 1 reed and 1 wood.'],
+    ['forage','🍓','Forage','Find 2 food, plus a little seasonal luck.'],
+    ['field','🌱','Tend the land','Plow an empty plot into a field.'],
+    ['grain','🌽','Take grain','Gather 1 grain and 1 food.'],
+    ['herd','🐑','Visit the market','Choose an animal to bring home.'],
+    ['build','🛠️','Build a pasture','Fence a plot (costs 2 wood).'],
+    ['sow','🌻','Sow a field','Plant grain or vegetables in a field.']
+  ];
+  const upgrades = [
+    {id:'hearth',name:'Baking hearth',desc:'3 clay · 1 wood — harvests yield +1 food.',cost:{clay:3,wood:1}},
+    {id:'barn',name:'Little barn',desc:'2 wood · 1 reed — a fine improvement worth 2 points.',cost:{wood:2,reed:1}},
+    {id:'garden',name:'Kitchen garden',desc:'2 clay · 2 food — gain 1 vegetable each harvest.',cost:{clay:2,food:2}},
+    {id:'room',name:'Family room',desc:'5 wood · 2 reed — add a room and welcome a worker.',cost:{wood:5,reed:2}}
+  ];
+  const fresh = () => ({season:0,workers:2,resources:{wood:2,clay:1,reed:0,food:4,grain:1,vegetables:0,sheep:0,cattle:0,pigs:0},board:['room','room',null,null,null,null,null,null,null],sown:{},used:[],bought:[],log:['Your family settles into a small two-room cottage.'],score:0,gameOver:false});
+  let game = load();
+  let toastTimer;
+  function load(){ try { const s=JSON.parse(localStorage.getItem('hearthHarvestSave')); if(s&&s.resources&&Array.isArray(s.board)) return s; } catch(e) {} return fresh(); }
+  function save(){ localStorage.setItem('hearthHarvestSave',JSON.stringify(game)); }
+  function note(text){ game.log.unshift(text); game.log=game.log.slice(0,12); }
+  function say(text){ const el=$('toast'); el.textContent=text; el.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.classList.remove('show'),2100); }
+  function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  function canPay(cost){ return Object.entries(cost).every(([k,v])=>game.resources[k]>=v); }
+  function pay(cost){ Object.entries(cost).forEach(([k,v])=>game.resources[k]-=v); }
+  function render(){
+    const season=game.season;
+    $('seasonChip').textContent=game.gameOver?'Farm complete':`Season ${season+1} of ${seasons.length}`;
+    $('roundTitle').textContent=game.gameOver?'A season well spent':`${seasons[season]} on the farm`;
+    $('roundCopy').textContent=game.gameOver?'Your little homestead has grown into something special.':`Place ${game.workers} workers, then prepare for the next season.`;
+    $('workerCount').textContent=game.workers; $('roundCount').textContent=`${season+1} / 6`;
+    $('resources').innerHTML=names.map((n,i)=>`<div class="resource"><span class="res-icon">${icons[i]}</span><div><span class="res-label">${n}</span><span class="res-value">${game.resources[n.toLowerCase()]||0}</span></div></div>`).join('');
+    $('farmBoard').innerHTML=game.board.map((tile,i)=>{
+      const type=tile||'empty', data={empty:['＋','Open plot','Ready to grow'],room:['🏠','Home','Family room'],field:['🌱','Field','Unplanted'],sown:['🌾','Sown field','Grain growing'],vegsown:['🥕','Sown field','Vegetables growing'],pasture:['🪵','Pasture',`${game.animals||'Animal'} pen`] }[type];
+      const crop=game.sown[i]?' · '+game.sown[i]:'';
+      return `<button class="plot ${type}" data-plot="${i}" aria-label="Plot ${i+1}: ${data[1]}${crop}"><span class="tile-icon">${data[0]}</span><span class="tile-name">${data[1]}</span><span class="tile-sub">${data[2]}</span></button>`;
+    }).join('');
+    const animals=['sheep','cattle','pigs']; $('animals').innerHTML=animals.map((a,i)=>`<div class="animal"><span>${icons[6+i]} ${a[0].toUpperCase()+a.slice(1)}</span><strong>${game.resources[a]}</strong></div>`).join('');
+    $('farmMeta').textContent=`${game.board.filter(Boolean).length} / 9 plots`;
+    $('workerText').textContent=`Family at home · ${game.workers} worker${game.workers===1?'':'s'} ready`;
+    $('workerIcons').textContent='👩‍🌾 '.repeat(game.workers);
+    $('actionsLeft').textContent=`${game.used.length} / ${game.workers} placed`;
+    $('actions').innerHTML=actions.map(([id,icon,title,desc])=>`<button class="action ${game.used.includes(id)?'used':''}" data-action="${id}" ${game.gameOver||game.used.includes(id)||game.used.length>=game.workers?'disabled':''}><div class="action-top"><span class="action-icon">${icon}</span><span class="action-name">${title}</span></div><p class="action-desc">${desc}</p></button>`).join('');
+    $('endRound').disabled=game.gameOver||game.used.length<game.workers;
+    $('upgrades').innerHTML=upgrades.map(u=>`<div class="upgrade"><div class="upgrade-text"><strong>${u.name}${game.bought.includes(u.id)?' ✓':''}</strong><span>${u.desc}</span></div><button class="secondary" data-upgrade="${u.id}" ${game.gameOver||game.bought.includes(u.id)||!canPay(u.cost)||(u.id==='room'&&(game.workers>=4||!game.board.includes(null)))?'disabled':''}>${game.bought.includes(u.id)?'Owned':'Build'}</button></div>`).join('');
+    $('log').innerHTML=game.log.map((x,i)=>`<div class="log-item"><b>${i===0?'NOW':'•'}</b><span>${esc(x)}</span></div>`).join('');
+    $('endScreen').classList.toggle('show',game.gameOver);
+    save();
+  }
+  function modal(title,copy,choices){
+    $('modalTitle').textContent=title; $('modalCopy').textContent=copy;
+    $('choices').innerHTML=choices.map((c,i)=>`<button class="choice" data-choice="${i}" ${c.disabled?'disabled':''}><span><strong>${c.title}</strong><small>${c.detail||''}</small></span><b>${c.icon||'→'}</b></button>`).join('');
+    $('overlay').classList.add('show');
+  }
+  function closeModal(){ $('overlay').classList.remove('show'); $('choices').innerHTML=''; }
+  function chooseAction(id){
+    if(game.gameOver||game.used.includes(id)||game.used.length>=game.workers)return;
+    const finish=(message)=>{game.used.push(id); if(message)note(message); closeModal(); render();};
+    if(id==='wood'){game.resources.wood+=3;finish('Gathered 3 wood from the woodlot.');}
+    else if(id==='clay'){game.resources.clay+=2;finish('Brought 2 clay home from the pit.');}
+    else if(id==='reed'){game.resources.reed++;game.resources.wood++;finish('Collected reed and a useful piece of wood.');}
+    else if(id==='forage'){const bonus=Math.random()<.45?1:0;game.resources.food+=2+bonus;finish(`Foraged ${2+bonus} food for the family.`);}
+    else if(id==='grain'){game.resources.grain++;game.resources.food++;finish('Gathered a grain sheaf and a meal.');}
+    else if(id==='field'||id==='build'){
+      const free=game.board.map((t,i)=>t?null:i).filter(i=>i!==null);
+      if(!free.length){say('Every plot is already in use.');return;}
+      if(id==='build'&&game.resources.wood<2){say('You need 2 wood to build a pasture.');return;}
+      modal(id==='field'?'Plow a field':'Build a pasture',id==='field'?'Choose an open plot to prepare for sowing.':'Choose an open plot; fencing costs 2 wood.',free.map(i=>({title:`Plot ${i+1}`,detail:'Open ground',icon:'＋'})));
+      $('choices').onclick=e=>{const b=e.target.closest('[data-choice]');if(!b)return;const i=free[+b.dataset.choice];if(id==='build')pay({wood:2});game.board[i]=id==='field'?'field':'pasture';finish(id==='field'?`Plowed plot ${i+1} into a field.`:`Built a fenced pasture on plot ${i+1}.`);};
+    } else if(id==='sow'){
+      const fields=game.board.map((t,i)=>t==='field'?i:null).filter(i=>i!==null);
+      if(!fields.length){say('First plow an open plot to make a field.');return;}
+      const crops=[{key:'grain',title:'Sow grain',icon:'🌽',detail:`${game.resources.grain} grain in store`,disabled:game.resources.grain<1},{key:'vegetables',title:'Plant vegetables',icon:'🥕',detail:`${game.resources.vegetables} vegetables in store`,disabled:game.resources.vegetables<1}].filter(c=>!c.disabled);
+      if(!crops.length){say('Gather grain or vegetables before sowing.');return;}
+      modal('Sow a field','Choose a crop, then choose which field to plant.',crops.map(c=>({title:c.title,detail:c.detail,icon:c.icon})));
+      $('choices').onclick=e=>{const b=e.target.closest('[data-choice]');if(!b)return;const crop=crops[+b.dataset.choice].key;closeModal();modal('Choose a field','The crop will grow until the next harvest.',fields.map(i=>({title:`Plot ${i+1}`,detail:'Ready for planting',icon:'🌱'})));$('choices').onclick=ev=>{const target=ev.target.closest('[data-choice]');if(!target)return;const i=fields[+target.dataset.choice];game.resources[crop]--;game.board[i]=crop==='grain'?'sown':'vegsown';game.sown[i]=crop;finish(`Sowed ${crop} in plot ${i+1}.`);};};
+    } else if(id==='herd'){
+      const choices=[['sheep','🐑','Sheep'],['cattle','🐄','Cattle'],['pigs','🐖','Piglets']].map(([key,icon,title])=>({title,icon,detail:'Bring one animal home; it adds to your final score.'}));
+      modal('Choose an animal','A small start for your herd. Animals add to your final score.',choices);
+      $('choices').onclick=e=>{const b=e.target.closest('[data-choice]');if(!b)return;const key=['sheep','cattle','pigs'][+b.dataset.choice];game.resources[key]++;finish(`Brought home ${key==='pigs'?'a piglet':key==='sheep'?'a sheep':'a calf'}.`);};
+    }
+  }
+  function harvest(){
+    let cropFood=0, cropGrain=0, cropVeg=0;
+    for(const [index,crop] of Object.entries(game.sown)){
+      if(crop==='grain'){cropGrain+=2;cropFood+=1;} else {cropVeg+=1;}
+      game.board[+index]='field';
+    }
+    game.sown={}; game.resources.grain+=cropGrain; game.resources.vegetables+=cropVeg;
+    if(game.bought.includes('garden'))game.resources.vegetables++;
+    if(game.bought.includes('hearth'))cropFood++;
+    game.resources.food+=cropFood;
+    const need=game.workers, paid=Math.min(need,game.resources.food);game.resources.food-=paid;
+    const short=need-paid;
+    if(short)game.score-=short*3;
+    note(`Harvest: ${cropGrain} grain, ${cropVeg+(game.bought.includes('garden')?1:0)} vegetables; ${paid}/${need} meals served${short?` (−${short*3} points)`:''}.`);
+  }
+  function endSeason(){
+    if(game.used.length<game.workers||game.gameOver)return;
+    if((game.season+1)%2===0)harvest();
+    game.season++;
+    if(game.season>=seasons.length){
+      game.gameOver=true;
+      const land=game.board.filter(Boolean).length;
+      const animals=game.resources.sheep+game.resources.cattle*2+game.resources.pigs;
+      game.score+=land+game.workers*3+animals+Math.floor(game.resources.food/2)+game.resources.grain+game.resources.vegetables*2+game.bought.length*2;
+      note('The final winter settles over your thriving homestead.');
+      renderScore();
+    } else {
+      game.used=[];
+      note(`${seasons[game.season]} begins. Your workers are ready for a new day.`);
+    }
+    render();
+  }
+  function renderScore(){
+    const land=game.board.filter(Boolean).length;
+    const animals=game.resources.sheep+game.resources.cattle*2+game.resources.pigs;
+    const positive=land+game.workers*3+animals+Math.floor(game.resources.food/2)+game.resources.grain+game.resources.vegetables*2+game.bought.length*2;
+    $('scoreCard').innerHTML=`<div class="eyebrow">A homestead to be proud of</div><h2>Harvest complete</h2><div class="score-total">${game.score} points</div><div class="score-line"><span>Plots developed</span><b>+${land}</b></div><div class="score-line"><span>Family (${game.workers} workers)</span><b>+${game.workers*3}</b></div><div class="score-line"><span>Animals</span><b>+${animals}</b></div><div class="score-line"><span>Stores & improvements</span><b>+${Math.floor(game.resources.food/2)+game.resources.grain+game.resources.vegetables*2+game.bought.length*2}</b></div><div class="score-line"><span>Food shortages</span><b>${game.score-positive}</b></div><button class="primary" id="newGame">Start a new farm</button>`;
+    $('newGame').onclick=()=>{game=fresh();closeModal();$('endScreen').classList.remove('show');render();say('A new homestead awaits.');};
+  }
+  function buyUpgrade(id){
+    const u=upgrades.find(x=>x.id===id); if(!u||game.bought.includes(id)||!canPay(u.cost))return;
+    pay(u.cost);game.bought.push(id);
+    if(id==='room'&&game.workers<4){game.board[game.board.indexOf(null)]='room';game.workers++;}
+    note(`${u.name} is ready for the farm.`);render();say(`${u.name} built!`);
+  }
+  document.addEventListener('click',e=>{
+    const action=e.target.closest('[data-action]'); if(action){chooseAction(action.dataset.action);return;}
+    const upgrade=e.target.closest('[data-upgrade]'); if(upgrade){buyUpgrade(upgrade.dataset.upgrade);return;}
+    const plot=e.target.closest('[data-plot]'); if(plot){const tile=game.board[+plot.dataset.plot];say(tile?`Plot ${+plot.dataset.plot+1}: ${tile==='room'?'family home':tile}.`:`Open plot ${+plot.dataset.plot+1} — use a land action to develop it.`);}
+  });
+  $('endRound').addEventListener('click',endSeason);
+  $('cancelModal').addEventListener('click',closeModal);
+  $('overlay').addEventListener('click',e=>{if(e.target===$('overlay'))closeModal();});
+  $('choices').addEventListener('click',e=>{const b=e.target.closest('[data-choice]');if(!b)return;});
+  render();
+})();
+</script></body></html>
